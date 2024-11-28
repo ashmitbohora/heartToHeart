@@ -1,0 +1,20 @@
+<svg width="984" height="980" viewBox="0 0 984 980" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_d_29_2)">
+<path d="M10 404.045C10 391.795 15.6129 380.221 25.2315 372.636L472.705 19.7675C487.368 8.20467 508.08 8.32565 522.607 20.0589L959.134 372.64C968.536 380.234 974 391.672 974 403.757V483.872V521.046C974 543.137 956.091 561.046 934 561.046H50C27.9086 561.046 10 543.137 10 521.046V472.847V404.045Z" fill="#FFF4F6"/>
+<path d="M69 194H915V966H69V194Z" fill="#FFC1E3"/>
+<path d="M10 464.475C10 434.559 41.639 415.23 68.2572 428.885L473.262 636.644C484.713 642.518 498.29 642.524 509.746 636.66L915.773 428.807C942.389 415.182 974 434.512 974 464.413V926C974 948.091 956.091 966 934 966H50C27.9086 966 10 948.091 10 926V464.475Z" fill="#FFF4F6"/>
+<path d="M537.159 709.245C566.575 692.568 609.026 666.459 626.717 645.578C639.953 629.978 644.26 610.651 638.503 592.681C626.202 551.747 558.085 535.02 515.655 562.452C513.269 563.985 511.069 565.684 508.811 567.428C507.89 568.14 506.958 568.86 506 569.579C505.042 568.86 504.11 568.14 503.189 567.428C500.931 565.684 498.731 563.985 496.345 562.452C453.915 535.02 385.798 551.747 373.497 592.681C367.74 610.651 372.046 629.978 385.284 645.578C402.974 666.459 445.425 692.568 474.841 709.245C483.038 713.893 506 726 506 726C506 726 528.962 713.893 537.159 709.245Z" fill="#FF9292"/>
+</g>
+<defs>
+<filter id="filter0_d_29_2" x="0.1" y="5.27651" width="983.8" height="974.623" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="4.95"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_29_2"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_29_2" result="shape"/>
+</filter>
+</defs>
+</svg>

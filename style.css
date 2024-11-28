@@ -1,0 +1,896 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+
+    --red: #D32F2F;
+    --darkRed: #B22222;
+    --darkerRed: #701414;
+    --pink: rgb(255, 193, 227);
+    --pinkLighter: rgba(255, 193, 227,0.6);
+    --whitePink: rgb(255, 244, 246);
+    --black: #333333;
+
+    --mFont: "Montserrat", "Havletica", sans-serif; 
+    --pFont: "Poppins", Impact, sans-serif;
+
+}
+
+body{
+    max-width: 2000px;
+    margin: 0 auto;
+    border: 2px solid black;
+
+    overflow-x: hidden !important;
+}
+
+
+header{
+    background-color: var(--whitePink);
+}
+
+
+a{
+    color: inherit;
+    text-decoration: none;
+    font-family: var(--mFont);
+}
+
+h1, h2, h3, h4, h5, h6{
+    color: var(--red);
+    font-family: var(--mFont);
+    text-align: center;
+}
+
+h1{
+    font-size: 2.5rem;
+}
+
+h2{
+    font-size: 2.25rem;
+    text-align: left;
+}
+
+h3{
+    font-size: 2rem;
+}
+
+h5{
+    font-size: 1.8rem;
+    text-align: left;
+}
+h6{
+    font-size: 1.5rem;
+    color: black;
+    font-weight: 500;
+}
+
+p{
+    font-size: 1.2rem;
+    font-family: var(--pFont);
+    color: var(--black);
+}
+i{
+    font-size: 1.2rem;  
+}
+
+button{
+    font-family: var(--mFont);
+}
+
+section{
+    padding: 100px 20px;
+}
+
+
+
+body{
+    background-color: var(--whitePink);
+}
+
+
+
+
+
+
+nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 90%;
+    margin: 0 auto;
+
+    padding: 10px;
+}
+
+
+.navRight{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+
+    color: black;
+    font-size: 1.2rem;
+}
+
+.navLogo{
+    width: 70px;
+
+}
+
+
+.landingPage{
+    box-sizing: content-box;
+    height: fit-content;
+    padding: 0px;
+    height: 100%;
+
+    padding-top: 0;
+    
+    position: relative;
+}   
+
+.landingImage{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+
+    position: relative;
+
+}
+
+
+.landingPage::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+
+
+    background: linear-gradient(to bottom, 
+    rgba(255, 193, 227, 1), 
+    rgba(255, 193, 227, 0.4), 
+    rgba(255, 193, 227, 0.3));
+
+}
+
+.landingPage .text{
+    position: absolute;
+    top: 5%;
+    z-index: 2;
+    width: 100%;
+    padding: 0 18vw;
+    text-align: center;
+}
+
+.landingPage .text h1{
+    font-size: clamp(3rem, 4vw , 5rem);
+}
+
+
+.landingPage .text .buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+    padding-top: 10px;
+}
+.landingPage .text button{
+    font-size: clamp(1.2rem, 1.8vw, 2rem);
+    font-weight: 600;
+}
+
+
+
+.mainButton{
+    border: 0;
+    outline: 0;
+
+    padding: 10px 20px;
+
+    background-color: var(--red);
+    color: white;
+
+
+    border-radius: 15px;
+}
+
+.secondaryButton{
+    border: 0;
+    outline: 0;
+
+    padding: 10px 20px;
+
+    background-color: var(--whitePink);
+    color: var(--red);
+
+
+    border-radius: 15px; 
+}
+
+/* 
+
+
+font-size: 1.2rem;
+font-size: 3rem; 
+
+
+*/
+
+
+
+
+
+
+
+/* Did you know page */
+
+.didYouKnow{
+    background-color: var(--darkRed);
+    padding: 40px;
+}
+
+.didYouKnow h3{
+    color: var(--whitePink);
+}
+
+.didYouKnow .bottom{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+
+    padding-top: 40px;
+}
+
+.stat{
+    padding: 20px;
+    flex: 1;
+}
+
+.didYouKnow h2{
+    color: var(--pink);
+}
+
+.didYouKnow p{
+    width: 80%;
+    font-size: 1rem;
+    color: var(--whitePink);
+}
+
+
+
+/* About Us */
+
+.aboutUs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.aboutUs h1{
+    padding-bottom: 50px;
+}
+
+.aboutUs .container{
+    width: 70%;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+}
+
+.card{
+    background-color: var(--pinkLighter);
+    width: 100%;
+    padding: 30px 20px 50px 20px;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.learnMoreButton{
+    border: 0;
+    outline: 0;
+
+    padding: 7px 15px;
+
+    background-color: var(--darkRed);
+    color: white;
+
+
+    border-radius: 10px;  
+    font-weight: 800;
+    letter-spacing: 1px;
+    position: absolute;
+
+    right: 20px;
+    bottom: 15px;
+
+    cursor: pointer;
+
+}
+
+.redLearnMoreButton{
+    background-color: var(--red);
+}
+
+
+.card h6{
+    padding-top: 20px;
+    text-align: left;
+}
+
+
+
+
+/* Card Project */
+
+
+.cardProjectContainer{ 
+    width: 100%;
+    background-color: var(--red);
+}
+
+.cardProject{
+    position: relative;
+
+    width: clamp( 250px, 90vw, 600px);
+    margin: 0 auto;
+    height: 600px;
+    padding: 0;
+}
+
+.envelopeTop{
+    clip-path: polygon(50% 0, 100% 39%, 100% 100%, 0 100%, 0 39%);
+    background-color: var(--whitePink);
+
+    height: 450px;
+    width: 100%;
+
+    position: absolute;
+    z-index: 1;
+
+    top: 0;
+    left: 50%;
+    border-radius: 40px;
+    transform: translateX(-50%);
+}
+
+.envelopeBottom{
+    clip-path: polygon(50% 50%, 100% 0, 100% 100%, 0 100%, 0 0);
+    background-color: var(--whitePink);
+    width: 100%;
+    height: 320px;
+
+    border-radius: 40px;
+    position: absolute;
+    z-index: 3;
+
+    left: 50%;
+    top: 200px;
+    transform: translateX(-50%);
+}
+.envelopeBottom h2{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.envelopeCard{
+    background-color: var(--pink);
+    width: 90%;
+    height: 400px;
+    position: absolute;
+    z-index: 2;
+
+    top: 70px;
+    transform: translateX(-50%);
+    left: 50%;
+
+    padding: 20px 30px;
+
+
+
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.envelopeCard p{
+    font-size: 1rem;
+}
+
+.envelopeCard a{
+    align-self: center;
+
+    width: 65%;
+
+    margin-top: 10px;
+}
+
+
+.envelopeButton{
+    border: 0;
+    outline: 0;
+
+    padding: 7px 15px;
+
+    background-color: var(--darkRed);
+    color: white;
+
+
+    border-radius: 10px;  
+    font-weight: 800;
+    letter-spacing: 1px;
+    
+    width: 100%;
+}
+
+
+.envelopeLogoImg{
+    align-self: center;
+    margin-top: 20px;
+}
+
+
+/* Blogs Pages */
+
+.blogsPage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.blogsSmallHeader{
+    text-align: center;
+}
+
+.blogsContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 80px;
+    padding: 200px 60px 0 60px;
+}
+.blog{
+    width: clamp(250px, 80vw, 380px);
+}
+
+.blogTop{
+    height: 300px;
+    width: 100%;
+    background-color: var(--pink);
+    position: relative;
+}
+.blogBottom{
+    height: 100px;
+    width: 100%;
+    background-color: var(--black);
+}
+
+.blueHeart{
+    position: absolute;
+    top: -25%;
+    z-index: -1;
+}
+
+.blueHeart1{
+    left: -20%;
+}
+.blueHeart2{
+    rotate: 90deg;
+    right: -20%;
+}
+
+
+
+
+
+/* Get Involved */
+
+.getInvolved{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 100px;
+
+    background-color: var(--pink);
+}
+
+.getInvolved .top{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.getInvolved .top img{
+    width: 50px;
+}
+
+
+.getInvolved .bottom{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+
+    width: 100%;
+}
+
+.bottom .left{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    
+    gap: 40px;
+}
+
+
+.social{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+    gap: 10px;
+
+    font-size: 1rem;
+    
+    cursor: pointer;
+}
+
+.social p{
+    font-size: 1.3rem;
+    
+    text-align: left;
+    
+}
+
+.social i{
+    font-size: 2rem;
+
+}
+
+
+
+.bottom .right form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 400px;
+
+    gap: 10px;
+}
+
+.inputForms{
+    width: 100%;
+    height: 50px;
+    border: 0;
+    outline: 0;
+    padding-left: 10px;
+    border-radius: 10px;
+
+    
+}
+.right textarea{
+    resize: none;
+    height: 100px;
+    width: 400px;
+    padding: 10px 10px;
+}
+
+
+
+
+.inputButton{
+    width: 400px;
+    padding: 10px 0;
+
+    outline: none;
+    border: none;
+
+    background-color: var(--darkRed);
+    color: var(--whitePink);
+
+    font-size: 1.2rem;
+
+    border-radius: 10px;
+}
+
+.inputForms::placeholder, .right textarea::placeholder{
+    color: var(--black);
+    font-family: var(--mFont);
+}
+
+
+
+
+
+
+
+
+
+/* Footer */
+
+
+footer{
+    background-color: var(--darkerRed);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 15px;
+}
+
+footer p{
+    color: var(--whitePink);
+    text-align: center;
+}
+
+footer p a{
+    color: lightblue;
+    font-weight: 800;
+}
+
+
+
+
+
+
+
+@media (min-width: 1024px){
+    .landingImage{
+        max-height: 850px;
+        object-position: middle bottom;
+    }
+    .landingPage{
+        padding-top: 50px;
+    }
+
+    .landingPage::before{
+        background: linear-gradient(to bottom, 
+        rgba(255, 193, 227, 1) 25%, 
+        rgba(255, 193, 227, 0.5),
+        rgba(255, 193, 227, 0.3), 
+        rgba(255, 193, 227, 0.2));
+    }
+
+}
+
+
+
+
+
+
+
+@media (max-width: 1024px){
+
+    .landingPage{
+        padding-top: 100px;
+    }
+
+    .landingPage::before{
+        background: linear-gradient(to bottom, 
+        rgba(255, 193, 227, 1) 25%, 
+        rgba(255, 193, 227, 0.6),
+        rgba(255, 193, 227, 0.4), 
+        rgba(255, 193, 227, 0.3));
+    }
+
+
+    
+    .landingPage .text h1 {
+        font-size: clamp(2rem, 6vw , 3rem);
+    }
+
+    .landingPage .text button {
+        font-size: 1.25rem;
+    }
+
+
+    .aboutUs .container{
+        width: 85%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width: 768px){
+
+    
+
+    h1, h2{
+        font-size: clamp(1.3rem, 8vw, 2rem);
+    }
+
+    h3{
+        font-size: clamp(1.2rem, 7vw, 1.5rem);
+    }
+    h5{
+        font-size: clamp(1.1rem, 6vw, 1.3rem);
+    }
+
+    h6{
+        font-size: clamp(1rem, 5.5vw, 1.2rem);
+
+    }
+    p{
+        font-size: clamp(1rem, 5vw, 1rem);
+
+    }
+
+    .social p{
+        font-size: clamp(1.2rem, 3.5vw, 1.3rem);
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    .landingPage{
+        padding-top: 150px;
+    }
+
+    .landingPage::before{
+        background: linear-gradient(to bottom, 
+        rgba(255, 193, 227, 1) 30%, 
+        rgba(255, 193, 227, 0.6),
+        rgba(255, 193, 227, 0.4), 
+        rgba(255, 193, 227, 0.3));
+    }
+
+    .landingPage .buttons button{
+        font-size: clamp(1rem, 2.2vw, 1.25rem);
+    }
+
+
+
+    .didYouKnow{
+        padding: 40px 20px;
+    }
+
+
+
+
+
+
+
+    .aboutUs .container{
+        width: 95%;
+    }
+
+
+
+    .blueHeart{
+        display: none;
+    }
+
+
+    .blogsContainer{
+        padding: 100px 30px 0 30px;
+    }
+
+
+
+
+    
+    .getInvolved .bottom{
+        flex-direction: column-reverse;
+    }
+
+    .bottom .right form, 
+    .right textarea, 
+    .inputButton{
+        width: 95vw;
+    }
+
+    .bottom .right{
+        padding-bottom: 40px;
+    }
+    
+
+    .bottom .left{
+        flex-direction: row;
+        width: 95vw;
+        flex-wrap: wrap;
+    }
+
+
+
+
+
+}
+
+
+
+
+@media(max-width: 650px){
+    .landingPage .text{
+        padding: 0 20px;
+    }
+
+
+
+    .landingPage::before{
+        background: linear-gradient(to bottom, 
+        rgba(255, 193, 227, 1) 35%, 
+        rgba(255, 193, 227, 0.6),
+        rgba(255, 193, 227, 0.5), 
+        rgba(255, 193, 227, 0.35));
+    }
+}
+
+@media (max-width: 425px){
+
+    .landingPage::before{
+        background: linear-gradient(to bottom, 
+        rgba(255, 193, 227, 1) 45%, 
+        rgba(255, 193, 227, 0.6),
+        rgba(255, 193, 227, 0.5), 
+        rgba(255, 193, 227, 0.35));
+    }
+    
+    .landingPage .text{
+        padding: 0 10px;
+    }
+}
+
+
+@media (max-width: 350px){
+    .landingPage{
+        padding-top: 180px;
+    }
+}
