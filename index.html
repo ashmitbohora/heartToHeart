@@ -23,11 +23,22 @@
         <nav>
             <img class="navLogo" src="Images/haertToHeartLogo-1.png" alt="Heart To Heart Logo">
             <div class="navRight">
-                <a href="#">Home</a>
-                <a href="#">Events</a>
-                <a href="#">Blogs</a>
-                <a href="#">Contact</a>
-            </div> 
+                <a href="#about-us">About</a>
+                <a href="#past-projects">Events</a>
+                <a href="#blogs">Blogs</a>
+                <a href="#contact-us">Contact</a>
+            </div>
+            <div class="navMobile hidden">
+                <div class="more">
+                    <a href="#about-us">About</a>
+                    <a href="#past-projects">Events</a>
+                    <a href="#blogs">Blogs</a>
+                    <a href="#contact-us">Contact</a>
+                    <i class="fa-solid fa-xmark navFA"></i>
+                </div>
+
+            </div>  
+            <i class="fa-solid fa-bars navFA"></i>
         </nav>
     </header>
     <main>
@@ -37,8 +48,12 @@
                 <div class="text">
                     <h1>Empowering Health <br> One Beat at a Time</h1>
                     <div class="buttons">
-                        <button class="mainButton redButton landingButton">Get Involved</button>
-                        <button class="secondaryButton whiteButton landingButton">About Us</button>
+                        <a href="#contact-us">
+                            <button class="mainButton redButton landingButton">Get Involved</button>
+                        </a>
+                        <a href="#about-us">
+                            <button class="secondaryButton whiteButton landingButton">About Us</button>
+                        </a>
                     </div>
 
                 </div>
@@ -62,7 +77,7 @@
                 </div>
             </div>
         </section>
-        <section class="aboutUs">
+        <section id="about-us" class="aboutUs">
             <h1><u>This is why Heart To Heart exists</u></h1>
             <div class="container">
                 <div class="card card1">
@@ -88,12 +103,14 @@
 
                         <h6>3. Stay Informed</h6>
                         <p>Follow us for updates on resources, events, and ways to help. Your support amplifies our impact.</p>
-                    <button class="redLearnMoreButton learnMoreButton">Get Involved</button>
+                    <a href="#contact-us">
+                        <button class="redLearnMoreButton learnMoreButton">Get Involved</button>
+                    </a>
                 </div>
             </div>
         </section>
 
-        <section class="cardProjectContainer">
+        <section id="past-projects" class="cardProjectContainer">
             <section class="cardProject">
                 <div class="envelopeTop">
                 </div>
@@ -105,6 +122,7 @@
                     <p>Heart to Heart's inaugural event created and delivered over 70 cards to cardiac patients, spreading hope and connection. Volunteers raised $100 and brought smiles to Texas Health HEB's cardiology floor, fostering compassion and support.</p>
                     <a href=""><button class="envelopeButton">Learn More</button></a>
                     <img class="envelopeLogoImg" src="Images/haertToHeartLogo-1.png" alt="Heart To Heart Logo">
+                    <i class="fa-solid fa-hand-pointer"></i>
                 </div>
             </section>
         </section>
@@ -114,7 +132,7 @@
 
 
 
-        <section class="blogsPage">
+        <section id="blogs" class="blogsPage">
             <h1><u>Interested in learning more?</u></h1>
             <h5 class="blogsSmallHeader">Our blog pages will be released shortly!</h5>
             <div class="blogsContainer">
@@ -133,7 +151,7 @@
             </div>
         </section>
 
-        <section class="getInvolved">
+        <section id="contact-us" class="getInvolved">
             <div class="top">
                 <img src="Images/haertToHeartLogo-1.png" alt="">
                 <h1><u>Get Involved!</u></h1>
@@ -141,22 +159,34 @@
             </div>
             <div class="bottom">
                 <div class="left">
-                    <div class="social">
-                        <i class="fa-brands fa-instagram"></i>
-                        <p>@HeartToHeart</p>
-                    </div>
-                    <div class="social">
-                        <i class="fa-brands fa-facebook"></i>
-                        <p>@HeartToHeart</p>
-                    </div>
-                    <div class="social">
-                        <i class="fa-solid fa-envelope"></i>
-                        <p>@HeartToHeart</p>
-                    </div>
-                    <div class="social">
-                        <i class="fa-solid fa-link"></i>
-                        <p>@HeartToHeart</p>
-                    </div>
+                    <a target="_blank" href="https://www.instagram.com/hearttoheartnpo/">
+                        <div class="social">
+                            <i class="fa-brands fa-instagram"></i>
+                            <p>HeartToHeart</p>
+                        </div>
+                    </a>
+
+                    <a target="_blank" href="https://www.facebook.com/profile.php?id=61563310113545">
+                        <div class="social">
+                            <i class="fa-brands fa-facebook"></i>
+                            <p>HeartToHeart</p>
+                        </div>
+                    </a>
+
+                    <a target="_blank" href="mailto:heartoheartnpo@gmail.com">
+                        <div class="social">
+                            <i class="fa-solid fa-envelope"></i>
+                            <p>HeartToHeart</p>
+                        </div>
+                    </a>
+
+                    <a target="_blank" href="https://forms.gle/uC79mPStBQS3jjRf6">
+                        <div class="social">
+                            <i class="fa-solid fa-link"></i>
+                            <p>Membership Form</p>
+                        </div>
+                    </a>
+
                 </div>
                 <div class="right">
                     <form action="">
@@ -176,12 +206,12 @@
     
     <footer>
         <p>© Heart To Heart 2024. All rights reserved.</p>
-        <p>Designed and Developed by <a href=""> <u>Webspansion</u></a></p>
+        <p>Designed and Developed by <a target="_blank" href="https://getwebspansion.org/"> <u>Webspansion</u></a></p>
     </footer>
 
 
 
     
-
+    <script src="script.js"></script>
 </body>
 </html>
