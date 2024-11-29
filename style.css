@@ -1145,12 +1145,6 @@ footer p a{
 
 
 
-    .envelopeLogoImg{
-        display: none;
-    }
-
-
-
 }
 
 
@@ -1167,6 +1161,14 @@ footer p a{
 @media (max-width: 550px){
 
 
+
+
+
+    .envelopeLogoImg{
+        display: none;
+    }
+
+    
     .landingPage::before{
         background: linear-gradient(to bottom, 
         rgba(255, 193, 227, 1) 35%, 
