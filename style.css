@@ -30,7 +30,6 @@ html, body{
 body{
     max-width: 2000px;
     margin: 0 auto;
-    border: 2px solid black;
 }
 
 header{
@@ -895,6 +894,11 @@ footer p a{
 
 
 
+@media (min-width: 2000px) {
+    body{
+        border: 2px solid black;
+    }
+}
 
 
 @media (max-width: 1024px){
