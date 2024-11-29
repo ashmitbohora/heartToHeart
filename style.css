@@ -19,11 +19,21 @@
 
 }
 
+html, body{
+    overflow-x: hidden !important;
+    scroll-behavior: smooth;
+}
+
+
+
+
 body{
     max-width: 2000px;
     margin: 0 auto;
     border: 2px solid black;
+}
 
+header{
     overflow-x: hidden !important;
 }
 
@@ -106,7 +116,7 @@ nav{
     width: 90%;
     margin: 0 auto;
 
-    padding: 10px;
+    padding: 10px 15px;
 }
 
 .fa-bars{
@@ -189,7 +199,7 @@ nav{
     top: 5%;
     z-index: 2;
     width: 100%;
-    padding: 0 18vw;
+    padding: 0 clamp(20px, 4vw, 180px);
     text-align: center;
 }
 
@@ -203,11 +213,11 @@ nav{
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 2vw;
+    gap: clamp(10px, 2vw, 50px);
     padding-top: 10px;
 }
 .landingPage .text button{
-    font-size: clamp(1.2rem, 1.8vw, 2rem);
+    font-size: clamp(1.2rem, 1.6vw, 1.9rem);
     font-weight: 600;
 }
 
@@ -622,6 +632,7 @@ font-size: 3rem;
     cursor: pointer;
 
     color: var(--darkerRed);
+    transition: all 0.5s;
 }
 
 .social p{
@@ -629,17 +640,18 @@ font-size: 3rem;
     
     text-align: left;
     color: var(--darkerRed);
+    transition: all 0.5s;
 }
 
 
 .social:hover{
     color: var(--darkRed);
-    transition: all 0.5s;
+
 }
 
 .social p:hover{
     color: var(--darkRed);
-    transition: all 0.5s;
+
 }
 
 .social i{
@@ -700,7 +712,6 @@ font-size: 3rem;
 .inputButton:hover{
     background-color: var(--darkRed);
     letter-spacing: 1.5px;
-
 }
 
 .inputButton:active{
@@ -751,6 +762,92 @@ footer p a{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Cards for Hearts */
+
+
+.body2{
+    background-color: var(--whitePink);
+}
+
+
+.body2 main{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    width: 70%;
+    margin: 0 auto;
+}
+.body2 h1{
+    width: 100%;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.getInvolved h1{
+    padding-bottom: 0;
+}
+
+.body2 h3{
+    text-align: left;
+    padding-bottom: 15px;
+}
+
+.contentText{
+    padding-bottom: 40px;
+}
+
+
+
+.mainContent{
+    display: flex;
+    flex-direction: row;
+
+    gap: 50px;
+    padding-bottom: 100px;
+}
+
+.mainContent img{
+    height: auto;
+    width: clamp(375px, 30vw, 450px);
+}
+
+
+
+
+
+
+
+
+
 @media (min-width: 1024px){
     .landingImage{
         max-height: 850px;
@@ -768,9 +865,33 @@ footer p a{
         rgba(255, 193, 227, 0.2));
     }
 
+    .mainContent img{
+        width: 350px;
+    }
 }
 
 
+
+
+
+@media (min-width: 1500px) {
+
+    .landingPage .text h1{
+        text-align: left;
+    }
+    .landingPage .text .buttons{
+        justify-content: flex-start;
+    }
+
+
+    .landingPage::before{
+        background: linear-gradient(to bottom, 
+        rgba(255, 193, 227, 1) 10%, 
+        rgba(255, 193, 227, 0.5) 40%,
+        rgba(255, 193, 227, 0.3), 
+        rgba(255, 193, 227, 0.2));
+    }
+}
 
 
 
@@ -804,7 +925,27 @@ footer p a{
     .aboutUs .container{
         width: 85%;
     }
+
+
+
+
+
+
+
+
+
+
+
+
+    .body2 main{
+        width: 85%;
+    }
+
+    .mainContent img{
+        width: clamp(350px, 30vw, 450px);
+    }
 }
+
 
 
 
@@ -820,17 +961,29 @@ footer p a{
 
 
 
+    nav{
+        width: 100vw;
+        overflow-x: hidden;
+    }
+
 
     .navRight{
         display: none;
     }
 
+
+    .navMobile.hidden{
+        transform: translateX(100%);   
+
+    }
+
     .navMobile{
-        position: absolute;
+        position: fixed;
         height: 100vh;
         width: 100%;
         top: 0;
         right: 0;
+        transform: translateX(0);   
         background-color: rgb(255, 193, 227);
 
 
@@ -838,14 +991,18 @@ footer p a{
 
         font-size: 1.5rem;
 
-        transition: all 1s;
+
 
 
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
+
+        transition: all 1s;
     }
+
+
 
     .navMobile .more{
         display: flex;
@@ -858,9 +1015,7 @@ footer p a{
         
     }
 
-    .navMobile.hidden{
-        right: -100%;   
-    }
+ 
 
     .fa-bars{
         all: unset;
