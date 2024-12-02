@@ -832,13 +832,109 @@ footer p a{
     flex-direction: row;
 
     gap: 50px;
-    padding-bottom: 100px;
+
+    padding-bottom: 20px;
+    border-bottom: 2px dotted rgba(255, 193, 227, 1);
+
 }
 
 .mainContent img{
     height: auto;
     width: clamp(375px, 30vw, 450px);
 }
+
+
+
+
+
+.cardsSlider{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 5px;
+    padding: 30px 20px;
+    padding-left: 0px;
+
+    margin: 0 auto;
+}
+
+.sliderContainer{
+    width: clamp(550px, 40vw, 1200px);
+    height: auto;
+    aspect-ratio: 16 / 9;
+    background-color: lightgray;
+
+    overflow-y: hidden;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+
+    outline: 5px solid var(--darkRed);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+
+    position: relative;
+    
+
+}
+
+.sliderContainer::-webkit-scrollbar{
+    display: none;
+}
+.sliderContainer {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.sliderContainer img{
+    min-width: 100%;
+    height: auto;
+    object-fit: cover;
+
+    scroll-snap-align: start;
+}
+
+.sliderButtons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+}
+
+.sliderButtons i{
+    background-color: var(--red);
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    transition: all 0.2s;
+}
+
+.sliderButtons i:hover{
+    background-color: var(--darkRed);
+    
+}
+
+.sliderButtons i:active{
+    background-color: var(--darkerRed);
+
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -1172,6 +1268,14 @@ footer p a{
 @media(max-width: 650px){
     .landingPage .text{
         padding: 0 20px;
+    }
+
+    .sliderContainer{
+        width: clamp(250px, 80vw, 520px);
+    }
+
+    .sliderButtons{
+        scale: 0.8;
     }
 }
 
