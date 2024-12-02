@@ -825,6 +825,26 @@ footer p a{
     padding-bottom: 40px;
 }
 
+.getInvolvedButton{
+    all: unset;
+    background-color: var(--red);
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    transition: all 0.2s;
+
+}
+
+.getInvolvedButton:hover{
+    background-color: var(--darkRed);
+}
+
+.getInvolvedButton:active{
+    background-color: var(--darkerRed);
+}
 
 
 .mainContent{
@@ -1244,6 +1264,7 @@ footer p a{
 
     .mainContent{
         flex-direction: column;
+        padding-bottom: 100px;
     }
     .mainContent .right{
         display: flex;
@@ -1255,7 +1276,11 @@ footer p a{
     }
 
     .mainContent .right img{
-        width: 80%;
+        width: 100%;
+    }
+
+    .cardsSlider{
+        padding-top: 100px;
     }
 
 
