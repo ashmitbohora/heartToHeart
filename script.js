@@ -42,23 +42,29 @@ if (menu && xMark && navMobile) {
 let valueDisplays = document.querySelectorAll(".numIncreasing");
 let interval = 1000;
 
-console.log(valueDisplays);
-
-
 valueDisplays.forEach((valueDisplay) => {
     let startValue = 0;
-    let endValue = parseInt(valueDisplay.getAttribute ("data-val"));
-    console.log(endValue) ;
+    let endValue = parseInt(valueDisplay.getAttribute("data-val"));
 
     let duration = Math.floor(interval / endValue);
-    let counter = setInterval(function () {
+    let counter;
 
-        startValue += 1;
-        valueDisplay.textContent = startValue;
-        if (startValue == endValue){
-            clearInterval(counter);
-        }
-    }, duration);
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                counter = setInterval(function () {
+                    startValue += 1;
+                    valueDisplay.textContent = startValue;
+                    if (startValue == endValue) {
+                        clearInterval(counter);
+                    }
+                }, duration);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    observer.observe(valueDisplay);
 });
 
 
