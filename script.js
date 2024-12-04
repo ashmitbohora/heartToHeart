@@ -34,6 +34,60 @@ if (menu && xMark && navMobile) {
 
 
 
+
+
+
+// Number Counting Animation
+
+let valueDisplays = document.querySelectorAll(".numIncreasing");
+let interval = 1000;
+
+console.log(valueDisplays);
+
+
+valueDisplays.forEach((valueDisplay) => {
+    let startValue = 0;
+    let endValue = parseInt(valueDisplay.getAttribute ("data-val"));
+    console.log(endValue) ;
+
+    let duration = Math.floor(interval / endValue);
+    let counter = setInterval(function () {
+
+        startValue += 1;
+        valueDisplay.textContent = startValue;
+        if (startValue == endValue){
+            clearInterval(counter);
+        }
+    }, duration);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const leftArrow = document.querySelector(".fa-arrow-left");
 const rightArrow = document.querySelector(".fa-arrow-right");
 const imageSlider = document.querySelector(".sliderContainer");
@@ -67,3 +121,16 @@ rightArrow.addEventListener("click", () => {
     }
     sliderUpdate();
 });
+
+
+
+
+
+
+
+
+
+
+
+
+

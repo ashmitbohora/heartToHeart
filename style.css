@@ -975,10 +975,10 @@ footer p a{
 
     .landingPage::before{
         background: linear-gradient(to bottom, 
-        rgba(255, 193, 227, 1) 25%, 
+        rgba(255, 193, 227, 1) 20%, 
         rgba(255, 193, 227, 0.5),
-        rgba(255, 193, 227, 0.3), 
-        rgba(255, 193, 227, 0.2));
+        rgba(255, 193, 227, 0.4), 
+        rgba(255, 193, 227, 0.3));
     }
 
     .mainContent img{
@@ -1000,13 +1000,9 @@ footer p a{
     }
 
 
-    .landingPage::before{
-        background: linear-gradient(to bottom, 
-        rgba(255, 193, 227, 1) 10%, 
-        rgba(255, 193, 227, 0.5) 40%,
-        rgba(255, 193, 227, 0.3), 
-        rgba(255, 193, 227, 0.2));
-    }
+ 
+
+
 }
 
 
@@ -1018,19 +1014,21 @@ footer p a{
 }
 
 
-@media (max-width: 1024px){
-
+@media (max-width: 1500px){
     .landingPage{
-        padding-top: 100px;
+        padding-top: 0;
     }
 
     .landingPage::before{
         background: linear-gradient(to bottom, 
-        rgba(255, 193, 227, 1) 25%, 
-        rgba(255, 193, 227, 0.6),
+        rgba(255, 193, 227, 1) 15%, 
+        rgba(255, 193, 227, 0.5),
         rgba(255, 193, 227, 0.4), 
         rgba(255, 193, 227, 0.3));
     }
+}
+
+@media (max-width: 1024px){
 
 
     
