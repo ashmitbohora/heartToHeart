@@ -858,6 +858,11 @@ footer p a{
     border-bottom: 2px dotted rgba(255, 193, 227, 1);
 
 }
+.lastBox{
+    border-bottom: 2px dotted rgba(255, 193, 227, 1);
+    width: 100%;
+
+}
 
 .mainContent img{
     height: auto;
@@ -998,6 +1003,7 @@ footer p a{
 
     width: 75%;
     gap: 50px;
+    padding-bottom: 20px;
 }
 
 .becomeAMember .more .contentText{
@@ -1021,19 +1027,55 @@ footer p a{
     transition: all 0.2s;
 
     min-width: 200px;
+    width: clamp(200px, 80vw, 350px);
+
+    position: relative;
+    z-index: 1;
 }
+
+.becomeAMember .right a{
+    position: relative;
+    z-index: 2;
+}
+
+
 .becomeAMember .right img{
     width: 100%;
+    z-index: 0;
+    transition: all 0.2s;
 }
 
 
-.becomeAMember .right:hover{
-    background-color: var(--darkRed);
+.becomeAMember .right::before{
+    content: "";
+    inset: 0;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.0);
+    z-index: 1;
+
+    transition: all 0.2s;
+
+    cursor: pointer;
 }
 
-.becomeAMember .right:active{
-    background-color: var(--darkerRed);
+.becomeAMember .right:hover::before{
+    background-color: rgba(0, 0, 0, 0.1);
 }
+
+.becomeAMember .right:active:before{
+    background-color: rgba(0, 0, 0, 0.15);;
+}
+
+
+.becomeAMember .right:hover img{
+    filter: brightness(0.8);
+}
+
+.becomeAMember .right:active img{
+    filter: brightness(0.7);
+}
+
+
 
 
 
@@ -1494,6 +1536,11 @@ footer p a{
     
     .landingPage .text{
         padding: 0 10px;
+    }
+
+
+    .becomeAMember .more .contentText{
+        min-width: 5px;
     }
 }
 
