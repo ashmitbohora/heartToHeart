@@ -964,6 +964,113 @@ footer p a{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+/* Become a member */
+
+.becomeAMember{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+
+}
+
+.becomeAMember .more{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+    flex-wrap: wrap;
+
+    width: 75%;
+    gap: 50px;
+}
+
+.becomeAMember .more .contentText{
+    min-width: 300px;
+    text-wrap: wrap;
+    flex: 1;
+}
+
+.becomeAMember .more .contentText p{
+    margin-top: 20px;
+}
+
+.becomeAMember .more .contentText h3{
+    text-align: left;
+}
+
+.becomeAMember .right{
+    background-color: var(--red);
+    padding: 15px;
+    border-radius: 10px;
+    transition: all 0.2s;
+
+    min-width: 200px;
+}
+.becomeAMember .right img{
+    width: 100%;
+}
+
+
+.becomeAMember .right:hover{
+    background-color: var(--darkRed);
+}
+
+.becomeAMember .right:active{
+    background-color: var(--darkerRed);
+}
+
+
+
+.becomeAMember .right a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+}
+
+.becomeAMember .right p{
+    text-align: center;
+    background-color: transparent;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (min-width: 1024px){
     .landingImage{
         max-height: 850px;
@@ -1029,6 +1136,15 @@ footer p a{
 }
 
 @media (max-width: 1024px){
+
+
+
+    .becomeAMember .more{
+        width: 95%;
+    }
+
+
+
 
 
     
