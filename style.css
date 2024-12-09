@@ -205,6 +205,7 @@ nav{
 
 .landingPage .text h1{
     font-size: clamp(3rem, 4vw , 5rem);
+    text-align: left;
 }
 
 
@@ -212,7 +213,7 @@ nav{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     gap: clamp(10px, 2vw, 50px);
     padding-top: 10px;
 }
@@ -1364,6 +1365,14 @@ footer p a{
     }
 
 
+
+    .landingPage .text h1{
+        text-align: center;
+    }
+    .landingPage .text .buttons{
+        justify-content: center;
+    }
+    
 
 
 
