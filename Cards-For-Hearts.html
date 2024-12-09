@@ -162,12 +162,13 @@
 
             </div>
             <div class="right">
-                <form action="">
-                    <input type="text" name="name" placeholder="Name*" class="inputForms">
-                    <input type="text" name="mail" placeholder="Email*" class="inputForms">
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="e3e70b6c-aa5d-4a25-ab1e-c9d098292392">
+                    <input type="text" name="name" placeholder="Name*" class="inputForms" required>
+                    <input type="email" name="email" placeholder="Email*" class="inputForms" required>
                     <input type="tel" name="phone" placeholder="Phone Number" class="inputForms">
-                    <textarea name="message" id="" placeholder="Message*" class="inputForms"></textarea>
-                    <a href=""><button class="inputButton">Contact Us</button></a>
+                    <textarea name="message" placeholder="Message*" class="inputForms" required></textarea>
+                    <button type="submit" class="inputButton">Contact Us</button>
                 </form>
             </div>
         </div>
